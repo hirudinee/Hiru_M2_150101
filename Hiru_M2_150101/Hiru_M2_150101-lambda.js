@@ -23,18 +23,12 @@ exports.handler = function (event, context, callback) {
 		},
 		MessageStructure: 'String',
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:hiru_topic'
-	}).promise()
-		.then(data => {
-			// your code goes here
-			console.log('Data', data);
-		})
-		.catch(err => {
-			// error handling goes here
-			console.log('An error occured');
+	},
+	function(err, data) {
+  		if (err) console.log(err, err.stack); // an error occurred
+ 		else     console.log(data);           // successful response
 		});
 
 		console.log('End the process');
 		callback(null, 'Successfully executed');
-
-
 }
