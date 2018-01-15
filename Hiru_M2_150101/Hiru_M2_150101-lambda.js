@@ -15,20 +15,16 @@ exports.handler = function (event, context, callback) {
 			'key02': {
 				DataType: 'Number',
 				StringValue: '001'
-			},
-			// 'key03': {
-			// 	DataType: 'Binary',
-			// 	StringValue: '30313233343536373839'
-			// },
+			}
 		},
 		MessageStructure: 'String',
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:hiru_topic'
 	},
-	function(err, data) {
-  		if (err) console.log(err, err.stack); // an error occurred
- 		else     console.log(data);           // successful response
+		function (err, data) {
+			if (err) console.log(err, err.stack); // an error occurred
+			else console.log(data);           // successful response
 		});
 
-		console.log('End the process');
-		callback(null, 'Successfully executed');
+	console.log('End the process');
+	callback(null, 'Successfully executed');
 }
