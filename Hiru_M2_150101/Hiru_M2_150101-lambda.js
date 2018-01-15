@@ -16,10 +16,10 @@ exports.handler = function (event, context, callback) {
 				DataType: 'Number',
 				StringValue: '001'
 			},
-			'key03': {
-				DataType: 'Binary',
-				StringValue: '30313233343536373839'
-			},
+			// 'key03': {
+			// 	DataType: 'Binary',
+			// 	StringValue: '30313233343536373839'
+			// },
 		},
 		MessageStructure: 'String',
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:hiru_topic'
