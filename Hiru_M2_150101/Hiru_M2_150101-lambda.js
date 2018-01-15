@@ -21,8 +21,12 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:hiru_topic'
 	},
 		function (err, data) {
-			if (err) console.log(err, err.stack); // an error occurred
-			else console.log(data);           // successful response
+			if (err){ 
+				console.log(err, err.stack);
+				console.log(context);
+			} // an error occurred
+			else console.log(data);
+			console.log(context);          // successful response
 		});
 
 	console.log('End the process');
