@@ -5,8 +5,8 @@ exports.handler = function (event, context, callback) {
 	console.log('Started the lambda');
 
 	sns.publish({
-		Message: 'This is a test message two',
-		Subject: 'this is a test two',
+		Message: 'This is a test message three',
+		Subject: 'this is a test three',
 		MessageAttributes: {
 			'key01': {
 				DataType: 'String',
@@ -18,7 +18,7 @@ exports.handler = function (event, context, callback) {
 			}
 		},
 		MessageStructure: 'String',
-		TopicArn: 'arn:aws:sns:us-east-1:480964559519:Hiru_rwo'
+		TopicArn: 'arn:aws:sns:us-east-1:480964559519:Test'
 	},
 		function (err, data) {
 			if (err) {
