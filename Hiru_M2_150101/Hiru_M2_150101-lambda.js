@@ -18,7 +18,7 @@ exports.handler = function (event, context, callback) {
 			},
 			'key03': {
 				DataType: 'Binary',
-				StringValue: 'false'
+				StringValue: '1'
 			},
 		},
 		MessageStructure: 'String',
